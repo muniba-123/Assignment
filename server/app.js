@@ -20,7 +20,6 @@ app.use(express.urlencoded({
 }));
 db.sequelize.sync()
   .then((result) => {
-    
     app.get('/parent', async (req, res) => {
       
       const offset=(req.query.pageSize*req.query.pageNumber)-req.query.pageSize;
